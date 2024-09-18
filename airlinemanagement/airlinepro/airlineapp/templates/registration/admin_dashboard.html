@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin_dahboard.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Fly With Me</h1>
+        <a href="{% url 'logout' %}" class="button logout-button">Logout</a>
+    </div>
+
+    <div class="button-container">
+        <a href="{% url 'view_all_flights' %}" class="button">List All Flights</a>
+        <a href="{% url 'add_flight' %}" class="button">Add Flight</a>
+        <a href="{% url 'search_by_id' %}" class="button">Search by ID</a>
+        <a href="{% url 'select_flight_to_edit' %}" class="button">Edit Flight</a>
+    </div>
+</body>
+</html>

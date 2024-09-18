@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Flight</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add New Flight</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Flight</button>
+        </form>
+        <a href="{% url 'admin_dashboard' %}" class="back-btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>

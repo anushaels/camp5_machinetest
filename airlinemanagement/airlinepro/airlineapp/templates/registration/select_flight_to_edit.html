@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Flight to Edit</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Flight to Edit</h1>
+
+        <ul>
+            {% for flight in flights %}
+            <li>
+                <a href="{% url 'edit_flight' flight.flight_id %}">Edit Flight {{ flight.flight_id }} - {{ flight.DepAirport }} to {{ flight.ArrAirport }}</a>
+            </li>
+            {% empty %}
+            <li>No flights available.</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'admin_dashboard' %}">Back to Dashboard</a>
+    </div>
+</body>
+</html>

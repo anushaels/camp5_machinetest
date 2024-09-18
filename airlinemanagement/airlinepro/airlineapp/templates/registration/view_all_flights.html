@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Flights</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>List of Flights</h1>
+        <a href="{% url 'admin_dashboard' %}" class="button">Back to Dashboard</a>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight ID</th>
+                    <th>Departure Airport</th>
+                    <th>Departure Date</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Airport</th>
+                    <th>Arrival Date</th>
+                    <th>Arrival Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flight in flights %}
+                <tr>
+                    <td>{{ flight.flight_id }}</td>
+                    <td>{{ flight.dep_airport }}</td>
+                    <td>{{ flight.dep_date }}</td>
+                    <td>{{ flight.dep_time }}</td>
+                    <td>{{ flight.arr_airport }}</td>
+                    <td>{{ flight.arr_date }}</td>
+                    <td>{{ flight.arr_time }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7">No flights available.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

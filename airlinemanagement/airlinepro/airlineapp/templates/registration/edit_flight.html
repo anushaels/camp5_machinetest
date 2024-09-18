@@ -1,0 +1,10 @@
+<!-- templates/flights/edit_flight.html -->
+<h1>Edit Flight Details</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Flight</button>
+</form>
+
+<a href="{% url 'admin_dashboard' %}">Back to Dashboard</a>

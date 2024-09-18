@@ -1,0 +1,73 @@
+/* Ensure the entire page uses the specified background image */
+body {
+    background-image: url('/static/images/bg1.jpg'); /* Ensure this path matches your image location */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Text color for better contrast against the background */
+}
+
+/* Header styles */
+.header {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+     /* Semi-transparent background for the header */
+    background-color: #982B1C;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Center vertically */
+}
+
+.button {
+    display: inline-block;
+    padding: 60px 40px;
+    margin: 60px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #982B1C;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Logout button positioning */
+.logout-button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #800000;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
